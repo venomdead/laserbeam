@@ -1,0 +1,14 @@
+/Users/Jorge/Repos/LaserBeam/obj/Debug/Assembly-CSharp.csprojResolveAssemblyReference.cache
+/Users/Jorge/Repos/LaserBeam/obj/Debug/Assembly-CSharp.csproj.CoreCompileInputs.cache
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/Assembly-CSharp.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/Assembly-CSharp.pdb
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/UnityEditor.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/UnityEngine.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/UnityEngine.UI.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/Mono.Cecil.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/nunit.framework.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/Unity.DataContract.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/ICSharpCode.NRefactory.dll
+/Users/Jorge/Repos/LaserBeam/Temp/bin/Debug/UnityEngine.UI.dll.mdb
+/Users/Jorge/Repos/LaserBeam/obj/Debug/Assembly-CSharp.dll
+/Users/Jorge/Repos/LaserBeam/obj/Debug/Assembly-CSharp.pdb
