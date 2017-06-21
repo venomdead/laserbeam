@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class EnemyBehaviour : MonoBehaviour {
 
-	public static float health = 150f;
+	public float health = 150f;
 	public float projectileSpeed;
 	public float enemyFiringRate;
 	public GameObject projectilePrefab;

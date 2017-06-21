@@ -5,11 +5,13 @@ public class EnemySpawner : MonoBehaviour
 {
 
 	public GameObject enemyPrefab;
+	public GameObject enemy2Prefab;
 	public float width = 10f;
 	public float height = 5f;
 	public float speed = .5f;
 	public float spawnDelay = 0.5f;
 
+	private bool spawnSwitch = true;
 	private bool movingRight = false;
 	private float xmax;
 	private float xmin;
@@ -60,12 +62,12 @@ public class EnemySpawner : MonoBehaviour
 			movingRight = false;
 		}
 
-		if (AllMembersDead ()) {
-			Debug.Log ("Empty Formation");
+		if (AllMembersDead () & spawnSwitch) {
+			Debug.Log ("Empty Formation, spawning minions");
 			//bossSpawner.BossSpawn ();
-			speed = speed + .1f;
-			SpawnUntilFull ();
-		
+			SpawnUntilFull ();		
+		} else if (AllMembersDead () & !spawnSwitch){
+			SpawnSecondEnemy ();
 		}
 	}
 
@@ -82,6 +84,8 @@ public class EnemySpawner : MonoBehaviour
 		if (NextFreePosition ()) {
 			Invoke ("SpawnUntilFull", spawnDelay);
 		}
+
+		spawnSwitch = false;
 	}
 
 
@@ -111,6 +115,23 @@ public class EnemySpawner : MonoBehaviour
 			return true;
 		}
 
+		
+	void SpawnSecondEnemy(){
+
+		Transform freePosition = NextFreePosition ();
+		if (freePosition) {
+			GameObject enemy = Instantiate (enemy2Prefab, freePosition.position, Quaternion.identity) as GameObject;
+			enemy.transform.parent = freePosition;
+		}
+		//Recursion, when a method calls itself
+		if (NextFreePosition ()) {
+			Invoke ("SpawnSecondEnemy", spawnDelay);
+
+		}
+
+		spawnSwitch = true;
+
+	}
 
 
 	}
